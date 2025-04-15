@@ -1,13 +1,15 @@
 /*Exercise1: */
-let sum = 0
+let array = []
 function generateReports(students){
-    const nameslist = [];
     for (let i = 0; i < students.length ; i++) {
-        let eachobj = {}
-        eachobj["names"] = students[i].name;
-        nameslist.push(eachobj);
+        let scoreforeach = students[i].scores;
+        let sum = scoreforeach.reduce((total , score ) => { return total + score} ,0); 
+        //reduce function will set the value of total intially to zero 
+        //and each value in scoreforeach array will be considered as a score and will be added to the total
+        //since reduce() passes on each element in the array 
+        array.push(sum)
       }
-    console.log(nameslist)
+      console.log(array)
 }
 
 const students = [
