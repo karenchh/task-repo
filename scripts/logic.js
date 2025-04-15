@@ -55,5 +55,8 @@ generateReports(students)
 
 //Exercise 2:
 class BankAcount{
-    
+    constructor(ownerName, initialBalance){
+        this.ownerName = ownerName;
+        this.initialBalance = initialBalance;
+    }
 }
