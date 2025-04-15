@@ -109,5 +109,10 @@ Addbtn.addEventListener("click", function() {
     let task = document.getElementById("taskinput");
     let taskvalue = task.value;
     console.log(taskvalue);
+    let list = document.querySelector(".task-list"); // Reaching the list
+    let newlist = document.createElement("li"); // creating new element in the list 
+    newlist.textContent = taskvalue; //adding text to the li 
+    list.appendChild(newlist); // appending this li element to the selected list
+    task.value = "";
 });
 
