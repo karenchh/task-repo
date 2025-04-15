@@ -7,9 +7,9 @@ function generateReports(students){
             return transformedValue; // New value for the new array
             //element is each element in the array
             });   */
-    const updatedStudents = students.map(student => {
+    let updatedStudents = students.map(student => {
         let scoreforeach = student.scores;
-        let sum = scoreforeach.reduce((total , score ) => { return total + score} ,0); 
+        let sum = scoreforeach.reduce((total , score ) => { return total + score } ,0); 
         //reduce function will set the value of total intially to zero 
         //and each value in scoreforeach array will be considered as a score and will be added to the total
         //since reduce() passes on each element in the array so the time complexity is O(n) where n is scores of each student
@@ -50,3 +50,10 @@ const students = [
   ];
 
 generateReports(students)
+
+// =======================================================================
+
+//Exercise 2:
+class BankAcount{
+    
+}
