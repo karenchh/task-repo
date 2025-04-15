@@ -1,5 +1,5 @@
 /*Exercise1: */
-let array = []
+
 function generateReports(students){
     for (let i = 0; i < students.length ; i++) {
         let scoreforeach = students[i].scores;
@@ -7,9 +7,9 @@ function generateReports(students){
         //reduce function will set the value of total intially to zero 
         //and each value in scoreforeach array will be considered as a score and will be added to the total
         //since reduce() passes on each element in the array 
-        array.push(sum)
-      }
-      console.log(array)
+        let numberofscores = scoreforeach.length;
+        let average = sum/numberofscores;
+    }
 }
 
 const students = [
