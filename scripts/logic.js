@@ -4,7 +4,7 @@ function generateReports(students){
     const nameslist = [];
     for (let i = 0; i < students.length ; i++) {
         let eachobj = {}
-        eachobj['names'] = students[i].name;
+        eachobj["names"] = students[i].name;
         nameslist.push(eachobj);
       }
     console.log(nameslist)
