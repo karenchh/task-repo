@@ -52,18 +52,21 @@ const students = [
 generateReports(students)
 
 // =======================================================================
-//Time complexity = O(1) for each method inside the class and for the total methods too
+//Time complexity = O(1) for each method inside the class and for the total methods too with and withount the bonus
 //Exercise 2:
 class BankAccount{
     constructor(ownerName, initialBalance){
         this.ownerName = ownerName;
         this.initialBalance = initialBalance;
+        this.history = [];
     }
     deposit(amount){
         this.initialBalance += amount; //O(1)
+        this.history.push(`Deposited $${amount}`) //O(1)
     }
     withdraw(amount){
         this.initialBalance -= amount; //O(1)
+        this.history.push(`Withdrew $${amount}`) //O(1)
     }
     transferTo(anotherAccount, amount){
         if (this.initialBalance >= amount){
@@ -78,11 +81,20 @@ class BankAccount{
         console.log(`${this.ownerName}'s balance is $${this.initialBalance}`) //O(1)
     }
     //"John's balance is $400"
+    printHistory(){
+        if (this.history.length != 0) {
+            console.log(this.history);
+        }
+        else{
+            console.log("No history for this account.")
+        }
+    }
 }
-
 
 const acc1 = new BankAccount("John", 500);
 const acc2 = new BankAccount("Sara", 300); 
+acc1.printHistory();
 acc1.transferTo(acc2, 200); 
 acc1.getSummary(); // John's balance is $300 
 acc2.getSummary(); // Sara's balance is $500 
+acc1.printHistory();
