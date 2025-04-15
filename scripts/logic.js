@@ -54,7 +54,7 @@ generateReports(students)
 // =======================================================================
 
 //Exercise 2:
-class BankAcount{
+class BankAccount{
     constructor(ownerName, initialBalance){
         this.ownerName = ownerName;
         this.initialBalance = initialBalance;
@@ -73,6 +73,16 @@ class BankAcount{
         else {
             console.log("Insufficient balance")
         }
-
-    } //→ transfers if enough balance
+    } 
+    getSummary(){
+        console.log(`${this.ownerName}'s balance is $${this.initialBalance}`)
+    }
+    //"John's balance is $400"
 }
+
+
+const acc1 = new BankAccount("John", 500);
+const acc2 = new BankAccount("Sara", 300); 
+acc1.transferTo(acc2, 200); 
+acc1.getSummary(); // John's balance is $300 
+acc2.getSummary(); // Sara's balance is $500 
