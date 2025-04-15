@@ -1,9 +1,13 @@
 /*Exercise1: */
 let sum = 0
 function generateReports(students){
+    const nameslist = [];
     for (let i = 0; i < students.length ; i++) {
-        console.log(students[i].name);
+        let eachobj = {}
+        eachobj['names'] = students[i].name;
+        nameslist.push(eachobj);
       }
+    console.log(nameslist)
 }
 
 const students = [
