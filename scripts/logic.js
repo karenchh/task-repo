@@ -52,7 +52,7 @@ const students = [
 generateReports(students)
 
 // =======================================================================
-//Time complexity = O(1) for each function inside and for the total function too
+//Time complexity = O(1) for each method inside the class and for the total methods too
 //Exercise 2:
 class BankAccount{
     constructor(ownerName, initialBalance){
