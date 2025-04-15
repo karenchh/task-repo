@@ -52,7 +52,7 @@ const students = [
 generateReports(students)
 
 // =======================================================================
-
+//Time complexity = O(1) for each function inside and for the total function too
 //Exercise 2:
 class BankAccount{
     constructor(ownerName, initialBalance){
@@ -60,22 +60,22 @@ class BankAccount{
         this.initialBalance = initialBalance;
     }
     deposit(amount){
-        this.initialBalance += amount;
+        this.initialBalance += amount; //O(1)
     }
     withdraw(amount){
-        this.initialBalance -= amount;
+        this.initialBalance -= amount; //O(1)
     }
     transferTo(anotherAccount, amount){
         if (this.initialBalance >= amount){
             this.withdraw(amount);
             anotherAccount.deposit(amount);
-        }
+        } //O(1)
         else {
             console.log("Insufficient balance")
         }
     } 
     getSummary(){
-        console.log(`${this.ownerName}'s balance is $${this.initialBalance}`)
+        console.log(`${this.ownerName}'s balance is $${this.initialBalance}`) //O(1)
     }
     //"John's balance is $400"
 }
