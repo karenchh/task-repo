@@ -2,6 +2,11 @@
 //Time complexity = O(n) * O(n) = O(n^2)
 function generateReports(students){
     // mapping O(n) passing on students
+    /*  let newArray = array.map(element => {
+            //Transformation logic
+            return transformedValue; // New value for the new array
+            //element is each element in the array
+            });   */
     const updatedStudents = students.map(student => {
         let scoreforeach = student.scores;
         let sum = scoreforeach.reduce((total , score ) => { return total + score} ,0); 
