@@ -98,3 +98,9 @@ acc1.transferTo(acc2, 200);
 acc1.getSummary(); // John's balance is $300 
 acc2.getSummary(); // Sara's balance is $500 
 acc1.printHistory();
+
+
+// =======================================================================
+//Exercise 3:
+
+Addbtn.addEventListener("eventType", functionToRun);
