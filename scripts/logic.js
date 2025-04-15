@@ -107,5 +107,7 @@ const Addbtn = document.getElementById("Addbtn"); // to be able to reach the but
 
 Addbtn.addEventListener("click", function() {
     let task = document.getElementById("taskinput");
+    let taskvalue = task.value;
+    console.log(taskvalue);
 });
 
