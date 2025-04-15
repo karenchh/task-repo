@@ -62,4 +62,7 @@ class BankAcount{
     deposit(amount){
         this.initialBalance += amount;
     }
+    withdraw(amount){
+        this.initialBalance -= amount;
+    }
 }
