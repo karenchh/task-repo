@@ -65,4 +65,14 @@ class BankAcount{
     withdraw(amount){
         this.initialBalance -= amount;
     }
+    transferTo(anotherAccount, amount){
+        if (this.initialBalance >= amount){
+            this.withdraw(amount);
+            anotherAccount.deposit(amount);
+        }
+        else {
+            console.log("Insufficient balance")
+        }
+
+    } //→ transfers if enough balance
 }
