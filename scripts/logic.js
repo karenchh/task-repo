@@ -103,4 +103,9 @@ acc1.printHistory();
 // =======================================================================
 //Exercise 3:
 
-Addbtn.addEventListener("eventType", functionToRun);
+const Addbtn = document.getElementById("Addbtn"); // to be able to reach the button
+
+Addbtn.addEventListener("click", function() {
+    let task = document.getElementById("taskinput");
+});
+
